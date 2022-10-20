@@ -1,0 +1,48 @@
+@mixin flex($jc: center, $ai: center) {
+	display: flex;
+	justify-content: $jc;
+	align-items: $ai;
+	@content;
+}
+
+@mixin container($jc: center, $ai: center) {
+	@include flex($jc: $jc, $ai: $ai);
+	padding: 1rem;
+	margin: 0 auto;
+	@content;
+	width: 100%;
+	height: inherit;
+	@media screen and (min-width: 1024px) {
+		max-width: 1024px;
+	}
+}
+
+@mixin miw-425 {
+	@media screen and (min-width: 425px) {
+		@content;
+	}
+}
+
+@mixin maw-768 {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin miw-768 {
+	@media screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin maw-1010 {
+	@media screen and (max-width: 1010px) {
+		@content;
+	}
+}
+
+@mixin miw-1024 {
+	@media screen and (min-width: 1024px) {
+		@content;
+	}
+}

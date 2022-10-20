@@ -1,0 +1,15 @@
+.btn {
+	cursor: pointer;
+	border: none;
+	padding: 0.5rem 1rem;
+	margin: 0;
+	border-radius: 0.5rem;
+	font-weight: 500;
+	color: $color-dark;
+	&-primary {
+		background-color: $color-primary;
+	}
+	&-secondary {
+		background-color: $color-secondary;
+	}
+}
