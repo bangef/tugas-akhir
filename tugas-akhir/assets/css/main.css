@@ -16,15 +16,19 @@ a {
   text-decoration: none;
 }
 
-.wrapper-navbar {
+main {
   position: relative;
+}
+
+.is-sidebar-open::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
   top: 0;
   left: 0;
-  filter: blur(16px);
+  width: 100%;
   height: 100vh;
-  width: 100wh;
-  z-index: 999;
-  transition: all 0.5s ease-out;
+  background: rgba(238, 238, 238, 0.8);
 }
 
 .btn {
@@ -43,8 +47,77 @@ a {
   background-color: #91c483;
 }
 
+.mySwipper {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid transparent;
+  max-width: 400px;
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+.card-header {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #eeeeee;
+}
+.card-header-icon {
+  filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
+  border-radius: 50%;
+  width: 75px;
+  background: #91c483;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-header-icon > i {
+  font-size: 2rem;
+  color: #f5f5f5;
+}
+.card-body {
+  margin-top: 40px;
+  width: 100%;
+  background: #f5f5f5;
+  border-radius: 0.5rem;
+  padding: 4rem 1rem 1rem 1rem;
+  filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
+}
+.card-body-title {
+  font: 700 24px "DM Sans", arial;
+  line-height: 36px;
+  color: #434343;
+}
+.card-body-description {
+  margin-top: 1rem;
+  font: 400 18px "DM Sans", arial;
+  line-height: 23px;
+  color: #8a8a8a;
+}
+
+.swiper {
+  cursor: pointer;
+  width: 100%;
+}
+.swiper-pagination-bullet-active {
+  background: #91c483 !important;
+}
+
 header {
   position: relative;
+  z-index: 3;
   width: 100%;
   background-color: #eeeeee;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
@@ -98,6 +171,7 @@ header .container a .logo:hover {
 @media screen and (max-width: 768px) {
   header .container nav {
     padding: 1rem;
+    z-index: 3;
     position: absolute;
     background-color: #eeeeee;
     width: 75%;
@@ -440,6 +514,8 @@ header .container .show > .hamburger-item:nth-child(3) {
   }
 }
 .aboutus-right--image {
+  -webkit-animation: nudge 5s linear infinite alternate;
+          animation: nudge 5s linear infinite alternate;
   width: 100%;
   max-width: 526px;
   border-radius: 0.5rem;
@@ -506,14 +582,8 @@ header .container .show > .hamburger-item:nth-child(3) {
   bottom: 0;
 }
 .ourfeature-left {
+  width: 100%;
   text-align: center;
-}
-@media screen and (min-width: 1024px) {
-  .ourfeature-left {
-    width: 50%;
-    text-align: start;
-    padding-right: 2rem;
-  }
 }
 .ourfeature-left--title {
   font: 700 36px "DM Sans", arial;
@@ -526,49 +596,10 @@ header .container .show > .hamburger-item:nth-child(3) {
     line-height: auto;
   }
 }
-.ourfeature-left--description {
-  color: #8a8a8a;
-  margin-top: 24px;
-  font: 400 18px "DM Sans", arial;
-  line-height: 30px;
-  letter-spacing: -2%;
-}
-.ourfeature-left--btn {
-  margin-top: 60px;
-}
-.ourfeature-left--btn > button {
-  padding: 20px 40px;
-  font: 700 18px "DM Sans", arial;
-  line-height: 30px;
-  letter-spacing: -2%;
-}
-.ourfeature-left--btn > button:hover {
-  background-color: #e8bc4d;
-  transition: all 0.1s ease-in;
-}
-.ourfeature-left--btn > button:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px #e8bc4d;
-  background-color: #ffe162;
-}
 .ourfeature-right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 100px;
   width: 100%;
-}
-@media screen and (min-width: 1024px) {
-  .ourfeature-right {
-    margin-top: 0;
-    width: 50%;
-  }
-}
-.ourfeature-right--image {
-  width: 100%;
-  max-width: 526px;
-  border-radius: 0.5rem;
-  height: auto;
+  height: 300px;
 }
 .ourfeature .container {
   display: flex;
@@ -592,7 +623,7 @@ header .container .show > .hamburger-item:nth-child(3) {
 }
 @media screen and (min-width: 1024px) {
   .ourfeature .container {
-    flex-direction: row;
+    max-width: 1400px;
     padding: 140px 32px;
   }
 }/*# sourceMappingURL=main.css.map */

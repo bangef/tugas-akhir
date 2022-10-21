@@ -13,11 +13,11 @@ import { staticContent } from "./state/index.js";
 const RENDER_EVENT = "render-state";
 
 document.addEventListener("DOMContentLoaded", () => {
+	initSlider();
 	activeMenu();
-
 	getNodeList(".hamburger").addEventListener("click", function () {
 		addToggleClass(".hamburger", "show");
-		addToggleClass("#wrapper-navbar", "wrapper-navbar");
+		addToggleClass("main", "is-sidebar-open");
 		changeStyleWithCondition(
 			"nav",
 			"transform",
@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		let dbw = document.body.clientWidth;
 		hasClass(".hamburger", "show") && changeStyle("body", "overflow", "auto");
 		hasClass(".hamburger", "show") && removeClass(".hamburger", "show");
-		hasClass("#wrapper-navbar", "wrapper-navbar") &&
-			removeClass("#wrapper-navbar", "wrapper-navbar");
+		hasClass("main", "is-sidebar-open") &&
+			removeClass("main", "is-sidebar-open");
 		if (dbw <= 768) {
 			changeStyle("nav", "transform", "translateX(-100%)");
 		} else {
@@ -72,5 +72,32 @@ const activeMenu = () => {
 		if (el.href === window.location.href) {
 			element.classList.add("active");
 		}
+	});
+};
+
+const initSlider = () => {
+	var swipper = new Swiper(".mySwiper", {
+		slidesPerView: "auto",
+		centeredSlides: true,
+		spaceBetween: 30,
+		loop: true,
+		autoplay: {
+			delay: 3000,
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			500: {
+				slidesPerView: 2,
+			},
+			1024: {
+				slidesPerView: 3,
+			},
+		},
 	});
 };

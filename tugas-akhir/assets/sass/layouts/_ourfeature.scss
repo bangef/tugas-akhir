@@ -28,12 +28,8 @@
 		bottom: 0;
 	}
 	&-left {
+		width: 100%;
 		text-align: center;
-		@include miw-1024 {
-			width: 50%;
-			text-align: start;
-			padding-right: 2rem;
-		}
 		&--title {
 			font: 700 36px "DM Sans", arial;
 			color: $tc-first;
@@ -43,48 +39,12 @@
 				line-height: auto;
 			}
 		}
-		&--description {
-			color: $tc-second;
-			margin-top: 24px;
-			font: 400 18px "DM Sans", arial;
-			line-height: 30px;
-			letter-spacing: -2%;
-		}
-		&--btn {
-			margin-top: 60px;
-			& > button {
-				padding: 20px 40px;
-				font: 700 18px "DM Sans", arial;
-				line-height: 30px;
-				letter-spacing: -2%;
-
-				&:hover {
-					background-color: $color-primary-2;
-					transition: all 0.1s ease-in;
-				}
-				&:focus {
-					outline: none;
-					box-shadow: 0 0 0 3px $color-primary-2;
-					background-color: $color-primary;
-				}
-			}
-		}
 	}
 
 	&-right {
-		@include flex;
 		margin-top: 100px;
 		width: 100%;
-		@include miw-1024 {
-			margin-top: 0;
-			width: 50%;
-		}
-		&--image {
-			width: 100%;
-			max-width: 526px;
-			border-radius: 0.5rem;
-			height: auto;
-		}
+		height: 300px;
 	}
 	.container {
 		@include container {
@@ -95,7 +55,7 @@
 			padding: 100px 20px;
 		}
 		@include miw-1024 {
-			flex-direction: row;
+			max-width: 1400px;
 			padding: 140px 32px;
 		}
 	}

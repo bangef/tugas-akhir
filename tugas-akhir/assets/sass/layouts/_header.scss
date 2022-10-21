@@ -1,5 +1,6 @@
 header {
 	position: relative;
+	z-index: 3;
 	width: 100%;
 	background-color: $bg-light;
 	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -36,6 +37,7 @@ header {
 		nav {
 			@include maw-768 {
 				padding: 1rem;
+				z-index: 3;
 				position: absolute;
 				background-color: $color-light;
 				width: 75%;

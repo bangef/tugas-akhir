@@ -6,6 +6,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Sharety: Kelola Tabungan Komunitas</title>
 		<link rel="stylesheet" href="./assets/css/main.css" />
+		<!-- Font Awsome 6.2 CDN -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+			integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<!-- Swipper Slider v8.4.4 -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+		/>
 	</head>
 	<body>
 		<header>
@@ -30,7 +43,6 @@
 			</section>
 		</header>
 		<main>
-			<div id="wrapper-navbar"></div>
 			<article class="hero">
 				<section class="container">
 					<section class="hero-left">
@@ -47,7 +59,7 @@
 					<section class="hero-right">
 						<img
 							class="hero-right--image"
-							src="./assets/img/hero/save-deposit-box-with-rupiah.png"
+							src="./assets/img/hero/save-deposit-box-with-rupiah.webp"
 							alt="hero"
 						/>
 					</section>
@@ -66,7 +78,7 @@
 					<section class="aboutus-right">
 						<img
 							class="aboutus-right--image"
-							src="./assets/img/aboutus/invest-rupiah-money.png"
+							src="./assets/img/aboutus/invest-rupiah-money.webp"
 							alt="aboutus"
 						/>
 					</section>
@@ -75,22 +87,84 @@
 			<article class="ourfeature">
 				<section class="container">
 					<section class="ourfeature-left">
-						<h1 class="ourfeature-left--title">Fitur</h1>
-						<p class="ourfeature-left--description">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
-							laudantium?
-						</p>
+						<h1 class="ourfeature-left--title">Fitur Kami</h1>
 					</section>
-					<section class="ourfeature-right">
-						<img
-							class="ourfeature-right--image"
-							src="https://picsum.photos/500/300"
-							alt="ourfeature"
-						/>
+					<section class="ourfeature-right mySwiper">
+						<div class="swiper mySwiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="card">
+										<div class="card-header">
+											<div class="card-header-icon">
+												<i class="fa-solid fa-user-astronaut"></i>
+											</div>
+										</div>
+										<div class="card-body">
+											<h2 class="card-body-title">1</h2>
+											<p class="card-body-description">
+												Lorem ipsum dolor sit amet consectetur adipisicing elit.
+												Quibusdam, fuga!
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card">
+										<div class="card-header">
+											<div class="card-header-icon">
+												<i class="fa-solid fa-user-astronaut"></i>
+											</div>
+										</div>
+										<div class="card-body">
+											<h2 class="card-body-title">2</h2>
+											<p class="card-body-description">
+												Lorem ipsum dolor sit amet consectetur adipisicing elit.
+												Quibusdam, fuga!
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card">
+										<div class="card-header">
+											<div class="card-header-icon">
+												<i class="fa-solid fa-user-astronaut"></i>
+											</div>
+										</div>
+										<div class="card-body">
+											<h2 class="card-body-title">3</h2>
+											<p class="card-body-description">
+												Lorem ipsum dolor sit amet consectetur adipisicing elit.
+												Quibusdam, fuga!
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card">
+										<div class="card-header">
+											<div class="card-header-icon">
+												<i class="fa-solid fa-user-astronaut"></i>
+											</div>
+										</div>
+										<div class="card-body">
+											<h2 class="card-body-title">4</h2>
+											<p class="card-body-description">
+												Lorem ipsum dolor sit amet consectetur adipisicing elit.
+												Quibusdam, fuga!
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
 					</section>
 				</section>
 			</article>
 		</main>
+		<!-- Swipper Slider v8.4.4 -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 		<script type="module" src="./assets/js/main.js"></script>
 	</body>
 </html>

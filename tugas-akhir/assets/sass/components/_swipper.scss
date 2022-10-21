@@ -1,0 +1,7 @@
+.swiper {
+	cursor: pointer;
+	width: 100%;
+	&-pagination-bullet-active {
+		background: $bg-secondary !important;
+	}
+}

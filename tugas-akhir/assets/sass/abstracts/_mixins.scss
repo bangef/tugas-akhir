@@ -16,17 +16,6 @@
 	}
 }
 
-@mixin container-2 {
-	@include flex($jc: $jc, $ai: $ai);
-	margin: 0 auto;
-	@content;
-	width: 100%;
-	height: inherit;
-	@media screen and (min-width: 1024px) {
-		max-width: 1024px;
-	}
-}
-
 @mixin miw-425 {
 	@media screen and (min-width: 425px) {
 		@content;
@@ -130,6 +119,23 @@
 		@include miw-1024 {
 			flex-direction: $flex-direction;
 			padding: 140px 32px;
+		}
+	}
+}
+
+@mixin anime-nudge {
+	@keyframes nudge {
+		0%,
+		100% {
+			transform: translateY(0, 0);
+		}
+
+		50% {
+			transform: translateY(10px);
+		}
+
+		80% {
+			transform: translateY(-50px);
 		}
 	}
 }

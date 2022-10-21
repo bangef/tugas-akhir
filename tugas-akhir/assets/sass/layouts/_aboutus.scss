@@ -56,6 +56,7 @@
 			width: 50%;
 		}
 		&--image {
+			animation: nudge 5s linear infinite alternate;
 			width: 100%;
 			max-width: 526px;
 			border-radius: 0.5rem;
