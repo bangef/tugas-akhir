@@ -13,6 +13,7 @@ header {
 	}
 	.container {
 		@include container(space-between, center);
+		padding: 1rem;
 		flex-direction: row-reverse;
 		@include miw-768 {
 			flex-direction: row;
@@ -70,7 +71,7 @@ header {
 				& > li > a {
 					display: block;
 					padding: 1rem 0;
-					color: $color-secondary;
+					color: $tc-first;
 					font: 700 1rem "DM Sans", arial;
 					position: relative;
 

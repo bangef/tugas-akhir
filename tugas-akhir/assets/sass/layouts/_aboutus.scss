@@ -1,0 +1,78 @@
+.aboutus {
+	background-color: $bg-primary;
+	border-start-start-radius: 3rem;
+	border-start-end-radius: 3rem;
+	position: relative;
+	@include miw-425 {
+		border-start-start-radius: 3rem;
+		border-start-end-radius: 3rem;
+	}
+	@include miw-768 {
+		border-start-start-radius: 6rem;
+		border-start-end-radius: 6rem;
+	}
+	&::after {
+		z-index: -1;
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $bg-light;
+	}
+
+	&-left {
+		text-align: center;
+		@include miw-1024 {
+			width: 50%;
+			text-align: start;
+			padding-left: 2rem;
+		}
+		&--title {
+			font: 700 36px "DM Sans", arial;
+			color: $tc-first;
+			@include miw-768 {
+				font: 700 54px "DM Sans", arial;
+				letter-spacing: -2%;
+				line-height: auto;
+			}
+		}
+		&--description {
+			color: $tc-second;
+			margin-top: 24px;
+			font: 400 18px "DM Sans", arial;
+			line-height: 30px;
+			letter-spacing: -2%;
+		}
+	}
+
+	&-right {
+		@include flex;
+		margin-top: 100px;
+		width: 100%;
+		@include miw-1024 {
+			margin-top: 0;
+			width: 50%;
+		}
+		&--image {
+			width: 100%;
+			max-width: 526px;
+			border-radius: 0.5rem;
+			height: auto;
+		}
+	}
+	.container {
+		@include container {
+			flex-direction: column;
+		}
+		padding: 80px 16px;
+		@include miw-768 {
+			padding: 100px 20px;
+		}
+		@include miw-1024 {
+			flex-direction: row-reverse;
+			padding: 140px 32px;
+		}
+	}
+}

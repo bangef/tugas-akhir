@@ -67,7 +67,6 @@ const getMenu = () => {
 
 const activeMenu = () => {
 	document.dispatchEvent(new Event(RENDER_EVENT));
-	console.log();
 	getNodeLists(".menu-item").forEach((element) => {
 		let el = element.childNodes[0];
 		if (el.href === window.location.href) {
