@@ -20,7 +20,7 @@
 			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 		/>
 	</head>
-	<body>
+	<body id="to-top">
 		<header>
 			<section class="container">
 				<a href="/">
@@ -28,12 +28,10 @@
 						class="logo"
 						src="./assets/img/header/logo.svg"
 						alt="logo-sharety"
+						loading="lazy"
 				/></a>
 				<nav>
-					<ul id="menu-list">
-						<li><a href="" class="btn btn-primary">Sign Up</a></li>
-						<li><a href="" class="btn btn-secondary">Sign In</a></li>
-					</ul>
+					<ul id="menu-list"></ul>
 				</nav>
 				<div class="hamburger">
 					<div class="hamburger-item"></div>
@@ -61,6 +59,7 @@
 							class="hero-right--image"
 							src="./assets/img/hero/save-deposit-box-with-rupiah.webp"
 							alt="hero"
+							loading="lazy"
 						/>
 					</section>
 				</section>
@@ -80,6 +79,7 @@
 							class="aboutus-right--image"
 							src="./assets/img/aboutus/invest-rupiah-money.webp"
 							alt="aboutus"
+							loading="lazy"
 						/>
 					</section>
 				</section>
@@ -162,7 +162,29 @@
 					</section>
 				</section>
 			</article>
+			<article class="tagline">
+				<section class="container">
+					<div class="tagline-left">
+						<quotes class="tagline-left-title"
+							>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							Debitis, error?</quotes
+						>
+					</div>
+					<div class="tagline-right">
+						<img
+							class="tagline-right-image"
+							src="./assets/img/tagline/tagline.webp"
+							alt="bussinesman"
+							loading="lazy"
+						/>
+					</div>
+				</section>
+			</article>
+			<a href="#to-top" class="go-top"><i class="fas fa-arrow-up"></i></a>
 		</main>
+		<footer>
+			<h1>Hai footer</h1>
+		</footer>
 		<!-- Swipper Slider v8.4.4 -->
 		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 		<script type="module" src="./assets/js/main.js"></script>

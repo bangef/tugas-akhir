@@ -53,6 +53,15 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		});
 	});
+
+	window.addEventListener("scroll", () => {
+		let isScroll = window.scrollY;
+		if (isScroll > 0) {
+			changeStyle(".go-top", "display", "flex");
+		} else {
+			changeStyle(".go-top", "display", "none");
+		}
+	});
 });
 
 document.addEventListener(RENDER_EVENT, () => {
