@@ -1,12 +1,8 @@
 .tagline {
-	background: $bg-secondary;
+	background: $bg-primary;
 	border-start-start-radius: 3rem;
 	border-start-end-radius: 3rem;
 	position: relative;
-	@include miw-425 {
-		border-start-start-radius: 3rem;
-		border-start-end-radius: 3rem;
-	}
 	@include miw-768 {
 		border-start-start-radius: 6rem;
 		border-start-end-radius: 6rem;
@@ -30,10 +26,11 @@
 			width: 50%;
 		}
 		&-title {
-			font: 700 36px "DM Sans", arial;
+			font-weight: 700;
+			font-size: 36px;
 			color: $tc-first;
 			@include miw-768 {
-				font: 700 54px "DM Sans", arial;
+				font-size: 54px;
 				letter-spacing: -2%;
 			}
 			&::before,
@@ -73,7 +70,6 @@
 		}
 		@include miw-1024 {
 			flex-direction: row;
-			max-width: 1024px;
 			padding: 140px 32px;
 		}
 	}

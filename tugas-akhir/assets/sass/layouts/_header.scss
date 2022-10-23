@@ -72,11 +72,12 @@ header {
 				}
 				& > li > a {
 					display: block;
-					padding: 1rem 0;
-					color: $tc-first;
-					font: 700 1rem "DM Sans", arial;
 					position: relative;
-
+					&:not(.btn) {
+						padding: 1rem 0;
+						color: $tc-first;
+						font: 700 1rem "DM Sans", arial;
+					}
 					&:not(.btn)::before {
 						content: "";
 						position: absolute;
@@ -93,43 +94,6 @@ header {
 					&:hover:not(.btn)::before {
 						transform-origin: left;
 						transform: scaleX(1);
-					}
-				}
-				& > li > a.btn {
-					@include maw-768 {
-						width: 7rem;
-						text-align: center;
-					}
-					cursor: pointer;
-					border: none;
-					padding: 0.5rem 1rem;
-					margin: 0;
-					border-radius: 0.5rem;
-					font-weight: 500;
-					color: $color-dark;
-					&-primary {
-						background-color: $color-primary;
-						&:hover {
-							background-color: $color-primary-2;
-							transition: all 0.3s ease-in;
-						}
-						&:focus {
-							outline: none;
-							box-shadow: 0 0 0 3px $color-primary-2;
-							background-color: $color-primary;
-						}
-					}
-					&-secondary {
-						background-color: $color-secondary;
-						&:hover {
-							background-color: $color-secondary-2;
-							transition: all 0.3s ease-in;
-						}
-						&:focus {
-							outline: none;
-							box-shadow: 0 0 0 3px $color-secondary-2;
-							background-color: $color-secondary;
-						}
 					}
 				}
 				@include maw-768 {

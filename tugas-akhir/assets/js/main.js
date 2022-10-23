@@ -55,12 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	window.addEventListener("scroll", () => {
-		let isScroll = window.scrollY;
-		if (isScroll > 0) {
-			changeStyle(".go-top", "display", "flex");
-		} else {
-			changeStyle(".go-top", "display", "none");
-		}
+		window.scrollY > 0
+			? changeStyle(".go-top", "display", "flex")
+			: changeStyle(".go-top", "display", "none");
 	});
 });
 
@@ -85,7 +82,7 @@ const activeMenu = () => {
 };
 
 const initSlider = () => {
-	var swipper = new Swiper(".mySwiper", {
+	new Swiper(".mySwiper", {
 		slidesPerView: "auto",
 		centeredSlides: true,
 		spaceBetween: 30,
@@ -107,6 +104,15 @@ const initSlider = () => {
 			1024: {
 				slidesPerView: 3,
 			},
+		},
+	});
+	new Swiper(".product-right", {
+		slidesPerView: 1,
+		centeredSlides: true,
+		spaceBetween: 30,
+		loop: true,
+		autoplay: {
+			delay: 2000,
 		},
 	});
 };

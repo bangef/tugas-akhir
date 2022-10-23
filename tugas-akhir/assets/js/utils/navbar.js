@@ -27,10 +27,6 @@ const changeStyle = (selector, style, valueStyle) => {
 
 const createFragmentElList = ({ textContent, url, className }) => {
 	if (className.includes("btn")) {
-		// const elemenLi = document.createElement("li");
-		// const elemenA = document.createElement("a")
-		// elemenA.setAttribute('class', className);
-		// elemenLi.append(elemenA);
 		return `<li><a class="${className}" href="${url}">${textContent}</a></li>`;
 	} else {
 		return `<li class="${className}"><a href="${url}">${textContent}</a></li>`;

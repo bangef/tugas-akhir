@@ -44,19 +44,19 @@
 			<article class="hero">
 				<section class="container">
 					<section class="hero-left">
-						<h1 class="hero-left--title">Lorem ipsum dolor sit amet.</h1>
-						<p class="hero-left--description">
+						<h1 class="hero-left-title">Lorem ipsum dolor sit amet.</h1>
+						<p class="hero-left-description">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
 							itaque architecto maiores quaerat veniam? Blanditiis dicta illo
 							perferendis sunt autem?
 						</p>
-						<div class="hero-left--btn">
-							<button class="btn btn-primary">Mulai</button>
+						<div class="hero-left-btn">
+							<a href="/login" class="btn-cta btn-primary">Daftar</a>
 						</div>
 					</section>
 					<section class="hero-right">
 						<img
-							class="hero-right--image"
+							class="hero-right-image"
 							src="./assets/img/hero/save-deposit-box-with-rupiah.webp"
 							alt="hero"
 							loading="lazy"
@@ -67,20 +67,58 @@
 			<article class="aboutus">
 				<section class="container">
 					<section class="aboutus-left">
-						<h1 class="aboutus-left--title">Tentang Kami</h1>
-						<p class="aboutus-left--description">
+						<h1 class="aboutus-left-title">Tentang Kami</h1>
+						<p class="aboutus-left-description">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
 							itaque architecto maiores quaerat veniam? Blanditiis dicta illo
 							perferendis sunt autem?
 						</p>
+						<div class="aboutus-left-btn">
+							<a href="/aboutus" class="btn-cta btn-secondary">Lebih lanjut</a>
+						</div>
 					</section>
 					<section class="aboutus-right">
 						<img
-							class="aboutus-right--image"
+							class="aboutus-right-image"
 							src="./assets/img/aboutus/invest-rupiah-money.webp"
 							alt="aboutus"
 							loading="lazy"
 						/>
+					</section>
+				</section>
+			</article>
+			<article class="product">
+				<section class="container">
+					<section class="product-left">
+						<h1 class="product-left-title">Produk</h1>
+						<p class="product-left-description">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+							itaque architecto maiores quaerat veniam? Blanditiis dicta illo
+							perferendis sunt autem?
+						</p>
+						<div class="product-left-btn">
+							<a href="/produk" class="btn-cta btn-primary">Lebih lanjut</a>
+						</div>
+					</section>
+					<section class="swiper product-right">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img
+									class="product-right-image"
+									src="./assets/img/aboutus/invest-rupiah-money.webp"
+									alt="product"
+									loading="lazy"
+								/>
+							</div>
+							<div class="swiper-slide" style="text-align: center">
+								<img
+									class="product-right-image"
+									src="./assets/img/aboutus/invest-rupiah-money.webp"
+									alt="product"
+									loading="lazy"
+								/>
+							</div>
+						</div>
 					</section>
 				</section>
 			</article>
@@ -89,7 +127,7 @@
 					<section class="ourfeature-left">
 						<h1 class="ourfeature-left--title">Fitur Kami</h1>
 					</section>
-					<section class="ourfeature-right mySwiper">
+					<section class="ourfeature-right">
 						<div class="swiper mySwiper">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
@@ -182,8 +220,33 @@
 			</article>
 			<a href="#to-top" class="go-top"><i class="fas fa-arrow-up"></i></a>
 		</main>
-		<footer>
-			<h1>Hai footer</h1>
+		<footer class="footer">
+			<section class="container">
+				<div class="footer-top">
+					<div class="footer-top-brand">
+						<img
+							class="footer-top-brand-logo"
+							src="./assets/img/header/logo.svg"
+							alt="logo-sharety"
+							loading="lazy"
+						/>
+						<p class="footer-top-brand-description">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+							itaque!
+						</p>
+					</div>
+					<ul class="footer-top-info">
+						<li class="footer-top-info-item">Menu</li>
+						<li class="footer-top-info-item"><a href="">lorem</a></li>
+						<li class="footer-top-info-item"><a href="">lorem</a></li>
+						<li class="footer-top-info-item"><a href="">lorem</a></li>
+					</ul>
+				</div>
+				<div class="footer-btm">
+					<hr class="footer-btm-hr" />
+					<p class="footer-btm-credit">&#9426; Sharety 2022</p>
+				</div>
+			</section>
 		</footer>
 		<!-- Swipper Slider v8.4.4 -->
 		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>

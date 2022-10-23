@@ -1,15 +1,50 @@
-.btn {
+.btn,
+.btn-cta {
 	cursor: pointer;
 	border: none;
-	padding: 0.5rem 1rem;
-	margin: 0;
 	border-radius: 0.5rem;
-	font-weight: 500;
-	color: $color-dark;
-	&-primary {
-		background-color: $color-primary;
+	font-weight: 700;
+}
+.btn {
+	@include maw-768 {
+		width: 7rem;
+		text-align: center;
 	}
-	&-secondary {
-		background-color: $color-secondary;
+	padding: 0.5rem 1rem;
+}
+
+.btn-cta {
+	padding: 1rem 1.5rem;
+}
+.btn-primary,
+.btn-secondary {
+	&:hover {
+		transition: all 0.1s ease-in;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+.btn-primary {
+	background: $color-primary;
+	color: $color-dark;
+	&:hover {
+		background: $color-primary-2;
+	}
+	&:focus {
+		box-shadow: 0 0 0 3px $color-primary-2;
+		background: $color-primary;
+	}
+}
+
+.btn-secondary {
+	color: $color-light;
+	background: $color-secondary;
+	&:hover {
+		background: rgba($color-secondary, 0.8);
+	}
+	&:focus {
+		box-shadow: 0 0 0 3px rgba($color-secondary, 0.5);
+		background: rgba($color-secondary, 0.8);
 	}
 }
