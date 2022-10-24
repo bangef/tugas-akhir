@@ -2,26 +2,70 @@ const staticContent = {
 	navbar: [
 		{
 			textContent: "Beranda",
-			url: "/beranda",
+			url: "/index.html",
 			className: "menu-item",
 		},
 		{
 			textContent: "Tentang Kami",
-			url: "/tentang-kami",
+			url: "/tentang-kami.html",
 			className: "menu-item",
 		},
-		{ textContent: "Produk", url: "/produk", className: "menu-item" },
+		{ textContent: "Produk", url: "/produk.html", className: "menu-item" },
 		{
 			textContent: "Kontak Kami",
-			url: "/kontak-kami",
+			url: "/kontak-kami.html",
 			className: "menu-item",
 		},
 		{
 			textContent: "Masuk",
-			url: "/login",
+			url: "/login.html",
 			className: "btn btn-primary",
+		},
+	],
+	ourfeature: [
+		{
+			index: 1,
+			classIcon: "fa-solid fa-clock-rotate-left",
+			cardTitle: "History",
+			cardDescription: "Menyimpan riwayat history alur transaksi keuangan.",
+		},
+		{
+			index: 2,
+			classIcon: "fa-solid fa-clock-rotate-left",
+			cardTitle: "History",
+			cardDescription: "Menyimpan riwayat history alur transaksi keuangan.",
+		},
+		{
+			index: 3,
+			classIcon: "fa-solid fa-clock-rotate-left",
+			cardTitle: "History",
+			cardDescription: "Menyimpan riwayat history alur transaksi keuangan.",
+		},
+		{
+			index: 4,
+			classIcon: "fa-solid fa-clock-rotate-left",
+			cardTitle: "History",
+			cardDescription: "Menyimpan riwayat history alur transaksi keuangan.",
+		},
+	],
+	footer: [
+		{
+			textContent: "Menu",
+		},
+		{
+			textContent: "Beranda",
+			url: "/index.html",
+		},
+		{
+			textContent: "Tentang Kami",
+			url: "/tentang-kami.html",
+		},
+		{ textContent: "Produk", url: "/produk.html" },
+		{
+			textContent: "Kontak Kami",
+			url: "/kontak-kami.html",
 		},
 	],
 };
 
-export { staticContent };
+export default staticContent;

@@ -9,10 +9,13 @@ import {
 	createFragmentElList,
 } from "./utils/navbar.js";
 import { disableScroll, enableScroll } from "./utils/scrolling.js";
-import { staticContent } from "./state/index.js";
+import createFragmentElListFooter from "./utils/footer";
+import staticContent from "./state/index";
+import createFragmentElCardOurfeature from "./utils/ourfeature";
 const RENDER_EVENT = "render-state";
 
 document.addEventListener("DOMContentLoaded", () => {
+	document.dispatchEvent(new Event(RENDER_EVENT));
 	initSlider();
 	activeMenu();
 	getNodeList(".hamburger").addEventListener("click", function () {
@@ -62,17 +65,27 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener(RENDER_EVENT, () => {
-	getMenu();
+	const { navbar, footer, ourfeature } = staticContent;
+	showUi("#menu-list", navbar, createFragmentElList);
+	showUi(".footer-top-info", footer, createFragmentElListFooter);
+	showUi(".of-data", ourfeature, createFragmentElCardOurfeature);
+	AOS.init({
+		duration: "1500",
+		once: true,
+	});
 });
 
-const getMenu = () => {
-	getNodeList("#menu-list").innerHTML = staticContent.navbar
-		.map((element) => createFragmentElList(element))
-		.join(" ");
+const showUi = (selector, data, callback) => {
+	if (getNodeList(selector) === null) {
+		return;
+	} else {
+		getNodeList(selector).innerHTML = data
+			.map((element) => callback(element))
+			.join(" ");
+	}
 };
 
 const activeMenu = () => {
-	document.dispatchEvent(new Event(RENDER_EVENT));
 	getNodeLists(".menu-item").forEach((element) => {
 		let el = element.childNodes[0];
 		if (el.href === window.location.href) {

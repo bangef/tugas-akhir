@@ -1,0 +1,131 @@
+.layout_2,
+.ppro {
+	position: relative;
+	z-index: 1;
+	&-head {
+		width: 100%;
+		height: 200px;
+		background: $bg-light;
+		@include miw-768 {
+			height: 300px;
+		}
+		@include miw-1024 {
+			height: 400px;
+		}
+		@include flex;
+		border-bottom-left-radius: 3rem;
+		border-bottom-right-radius: 3rem;
+		position: relative;
+		@include miw-768 {
+			border-bottom-left-radius: 6rem;
+			border-bottom-right-radius: 6rem;
+		}
+		&-title {
+			font-weight: 700;
+			font-size: 36px;
+			@include miw-768 {
+				font-size: 54px;
+				letter-spacing: -2%;
+				line-height: auto;
+			}
+			color: $tc-first;
+		}
+	}
+	&-body {
+		@include flex;
+		flex-direction: column;
+		gap: 60px;
+		&-wrapper {
+			width: 100%;
+			padding: 1rem;
+			border-radius: 1rem;
+			background: $bg-light;
+			&-left {
+				@include flex(flex-start, flex-start);
+				flex-direction: column;
+				gap: 24px;
+				&-title {
+					color: $tc-first;
+					font-weight: 700;
+					font-size: 36px;
+					@include miw-768 {
+						font-size: 54px;
+						letter-spacing: -2%;
+						line-height: auto;
+					}
+				}
+				&-description {
+					color: $tc-second;
+					font-weight: 400;
+					font-size: 18px;
+					line-height: 30px;
+					letter-spacing: -2%;
+				}
+			}
+			&-right {
+				display: none;
+			}
+		}
+	}
+	.container {
+		@include container {
+			flex-direction: column;
+		}
+		padding: 80px 16px;
+		@include miw-768 {
+			padding: 100px 20px;
+		}
+		@include miw-1024 {
+			padding: 140px 32px;
+		}
+	}
+}
+.layout_2 {
+	background-image: url("../img/aboutus/invest-rupiah-money.webp");
+	background-color: $bg-primary;
+	background-repeat: no-repeat;
+	background-size: 750px;
+	background-position: right 0% bottom -10%;
+	&-body-wrapper {
+		border: 3px dashed $bg-secondary;
+	}
+}
+.ppro {
+	background: $bg-secondary;
+	&-body-wrapper {
+		border: 3px dashed $bg-primary;
+		width: 100%;
+		@include flex;
+		flex-direction: column;
+		gap: 60px;
+		@include miw-768 {
+			flex-direction: row;
+			&-left {
+				width: 50%;
+				padding-right: 1rem;
+			}
+		}
+		&-right {
+			@include flex;
+			width: 100%;
+			height: 100%;
+			&-image {
+				width: 100%;
+				height: 100%;
+			}
+			@include miw-768 {
+				width: 50%;
+			}
+		}
+	}
+}
+.flip {
+	@include miw-768 {
+		flex-direction: row-reverse;
+	}
+}
+body .footer-ppro {
+	&::after {
+		background: $bg-secondary;
+	}
+}

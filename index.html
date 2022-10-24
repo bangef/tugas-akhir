@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="to-top">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,9 +19,11 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 		/>
+		<!-- AOS v2.3.1 -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 	</head>
-	<body id="to-top">
-		<header>
+	<body>
+		<header class="header">
 			<section class="container">
 				<a href="/">
 					<img
@@ -43,7 +45,7 @@
 		<main>
 			<article class="hero">
 				<section class="container">
-					<section class="hero-left">
+					<section class="hero-left" data-aos="fade-down" data-aos-delay="50">
 						<h1 class="hero-left-title">Lorem ipsum dolor sit amet.</h1>
 						<p class="hero-left-description">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
@@ -54,7 +56,7 @@
 							<a href="/login" class="btn-cta btn-primary">Daftar</a>
 						</div>
 					</section>
-					<section class="hero-right">
+					<section class="hero-right" data-aos="fade-down" data-aos-delay="500">
 						<img
 							class="hero-right-image"
 							src="./assets/img/hero/save-deposit-box-with-rupiah.webp"
@@ -66,7 +68,11 @@
 			</article>
 			<article class="aboutus">
 				<section class="container">
-					<section class="aboutus-left">
+					<section
+						class="aboutus-left"
+						data-aos="fade-down"
+						data-aos-delay="50"
+					>
 						<h1 class="aboutus-left-title">Tentang Kami</h1>
 						<p class="aboutus-left-description">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
@@ -74,10 +80,16 @@
 							perferendis sunt autem?
 						</p>
 						<div class="aboutus-left-btn">
-							<a href="/aboutus" class="btn-cta btn-secondary">Lebih lanjut</a>
+							<a href="/tentang-kami.html" class="btn-cta btn-secondary"
+								>Lebih lanjut</a
+							>
 						</div>
 					</section>
-					<section class="aboutus-right">
+					<section
+						class="aboutus-right"
+						data-aos="fade-down"
+						data-aos-delay="500"
+					>
 						<img
 							class="aboutus-right-image"
 							src="./assets/img/aboutus/invest-rupiah-money.webp"
@@ -89,7 +101,11 @@
 			</article>
 			<article class="product">
 				<section class="container">
-					<section class="product-left">
+					<section
+						class="product-left"
+						data-aos="fade-down"
+						data-aos-delay="50"
+					>
 						<h1 class="product-left-title">Produk</h1>
 						<p class="product-left-description">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
@@ -100,12 +116,16 @@
 							<a href="/produk" class="btn-cta btn-primary">Lebih lanjut</a>
 						</div>
 					</section>
-					<section class="swiper product-right">
+					<section
+						class="swiper product-right"
+						data-aos="fade-down"
+						data-aos-delay="500"
+					>
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<img
 									class="product-right-image"
-									src="./assets/img/aboutus/invest-rupiah-money.webp"
+									src="./assets/img/product/logo.svg"
 									alt="product"
 									loading="lazy"
 								/>
@@ -113,7 +133,7 @@
 							<div class="swiper-slide" style="text-align: center">
 								<img
 									class="product-right-image"
-									src="./assets/img/aboutus/invest-rupiah-money.webp"
+									src="./assets/img/product/bisnis-flow.svg"
 									alt="product"
 									loading="lazy"
 								/>
@@ -124,77 +144,16 @@
 			</article>
 			<article class="ourfeature">
 				<section class="container">
-					<section class="ourfeature-left">
+					<section
+						class="ourfeature-left"
+						data-aos="fade-down"
+						data-aos-delay="50"
+					>
 						<h1 class="ourfeature-left--title">Fitur Kami</h1>
 					</section>
 					<section class="ourfeature-right">
 						<div class="swiper mySwiper">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<div class="card">
-										<div class="card-header">
-											<div class="card-header-icon">
-												<i class="fa-solid fa-user-astronaut"></i>
-											</div>
-										</div>
-										<div class="card-body">
-											<h2 class="card-body-title">1</h2>
-											<p class="card-body-description">
-												Lorem ipsum dolor sit amet consectetur adipisicing elit.
-												Quibusdam, fuga!
-											</p>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="card">
-										<div class="card-header">
-											<div class="card-header-icon">
-												<i class="fa-solid fa-user-astronaut"></i>
-											</div>
-										</div>
-										<div class="card-body">
-											<h2 class="card-body-title">2</h2>
-											<p class="card-body-description">
-												Lorem ipsum dolor sit amet consectetur adipisicing elit.
-												Quibusdam, fuga!
-											</p>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="card">
-										<div class="card-header">
-											<div class="card-header-icon">
-												<i class="fa-solid fa-user-astronaut"></i>
-											</div>
-										</div>
-										<div class="card-body">
-											<h2 class="card-body-title">3</h2>
-											<p class="card-body-description">
-												Lorem ipsum dolor sit amet consectetur adipisicing elit.
-												Quibusdam, fuga!
-											</p>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="card">
-										<div class="card-header">
-											<div class="card-header-icon">
-												<i class="fa-solid fa-user-astronaut"></i>
-											</div>
-										</div>
-										<div class="card-body">
-											<h2 class="card-body-title">4</h2>
-											<p class="card-body-description">
-												Lorem ipsum dolor sit amet consectetur adipisicing elit.
-												Quibusdam, fuga!
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
+							<div class="swiper-wrapper of-data"></div>
 							<div class="swiper-pagination"></div>
 						</div>
 					</section>
@@ -202,13 +161,13 @@
 			</article>
 			<article class="tagline">
 				<section class="container">
-					<div class="tagline-left">
+					<div class="tagline-left" data-aos="fade-down" data-aos-delay="50">
 						<quotes class="tagline-left-title"
 							>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 							Debitis, error?</quotes
 						>
 					</div>
-					<div class="tagline-right">
+					<div class="tagline-right" data-aos="fade-down" data-aos-delay="500">
 						<img
 							class="tagline-right-image"
 							src="./assets/img/tagline/tagline.webp"
@@ -250,6 +209,8 @@
 		</footer>
 		<!-- Swipper Slider v8.4.4 -->
 		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+		<!-- AOS v2.3.1 -->
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script type="module" src="./assets/js/main.js"></script>
 	</body>
 </html>
