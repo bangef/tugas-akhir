@@ -1,0 +1,76 @@
+.tagline {
+	background: $bg-primary;
+	border-start-start-radius: 3rem;
+	border-start-end-radius: 3rem;
+	position: relative;
+	@include miw-768 {
+		border-start-start-radius: 6rem;
+		border-start-end-radius: 6rem;
+	}
+	&::after {
+		z-index: -1;
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $bg-light;
+	}
+	&-left {
+		width: 100%;
+		position: relative;
+		padding: 1rem 2rem;
+		text-align: center;
+		@include miw-1024 {
+			width: 50%;
+		}
+		&-title {
+			font-weight: 700;
+			font-size: 36px;
+			color: $tc-first;
+			@include miw-768 {
+				font-size: 54px;
+				letter-spacing: -2%;
+			}
+			&::before,
+			&::after {
+				content: '"';
+				position: absolute;
+				top: 0;
+				font-size: 100px;
+				font-family: "Times New Roman", Times, serif;
+				display: inline-block;
+			}
+			&::before {
+				left: 0;
+			}
+			&::after {
+				right: 0;
+			}
+		}
+	}
+	&-right {
+		display: none;
+		@include miw-1024 {
+			width: 50%;
+			@include flex;
+			&-image {
+				width: 80%;
+			}
+		}
+	}
+	.container {
+		@include container {
+			flex-direction: column;
+		}
+		padding: 80px 16px;
+		@include miw-768 {
+			padding: 100px 20px;
+		}
+		@include miw-1024 {
+			flex-direction: row;
+			padding: 140px 32px;
+		}
+	}
+}
