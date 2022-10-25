@@ -2,15 +2,17 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
 	// Build
-	// base: "https://bangef.github.io/tugas-akhir/",
+	base: "/tugas-akhir/",
 	// Dev
-	base: "",
+	// base: "",
 	build: {
 		rollupOptions: {
 			input: {
 				main: "./index.html",
 				"tentang-kami": "./tentang-kami.html",
 				produk: "./produk.html",
+				login: "./login.html",
+				register: "./register.html",
 				// ...
 				// List all files you want in your build
 			},

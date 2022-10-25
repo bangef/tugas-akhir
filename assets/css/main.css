@@ -719,6 +719,7 @@ main {
 }
 .layout_2 .container,
 .ppro .container {
+  overflow-x: hidden;
   display: flex;
   justify-content: center;
   align-items: center;

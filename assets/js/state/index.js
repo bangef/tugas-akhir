@@ -1,24 +1,104 @@
+/**
+ * For Dev
+ */
+// const staticContent = {
+// 	navbar: [
+// 		{
+// 			textContent: "Beranda",
+// 			url: "/index.html",
+// 			className: "menu-item",
+// 		},
+// 		{
+// 			textContent: "Tentang Kami",
+// 			url: "/tentang-kami.html",
+// 			className: "menu-item",
+// 		},
+// 		{ textContent: "Produk", url: "/produk.html", className: "menu-item" },
+// 		{
+// 			textContent: "Kontak Kami",
+// 			url: "/kontak-kami.html",
+// 			className: "menu-item",
+// 		},
+// 		{
+// 			textContent: "Masuk",
+// 			url: "/login.html",
+// 			className: "btn btn-primary",
+// 		},
+// 	],
+// 	ourfeature: [
+// 		{
+// 			index: 1,
+// 			classIcon: "fa-solid fa-clock-rotate-left",
+// 			cardTitle: "History",
+// 			cardDescription: "Menyimpan riwayat history alur transaksi keuangan.",
+// 		},
+// 		{
+// 			index: 2,
+// 			classIcon: "fa-solid fa-clock-rotate-left",
+// 			cardTitle: "History",
+// 			cardDescription: "Menyimpan riwayat history alur transaksi keuangan.",
+// 		},
+// 		{
+// 			index: 3,
+// 			classIcon: "fa-solid fa-clock-rotate-left",
+// 			cardTitle: "History",
+// 			cardDescription: "Menyimpan riwayat history alur transaksi keuangan.",
+// 		},
+// 		{
+// 			index: 4,
+// 			classIcon: "fa-solid fa-clock-rotate-left",
+// 			cardTitle: "History",
+// 			cardDescription: "Menyimpan riwayat history alur transaksi keuangan.",
+// 		},
+// 	],
+// 	footer: [
+// 		{
+// 			textContent: "Menu",
+// 		},
+// 		{
+// 			textContent: "Beranda",
+// 			url: "/index.html",
+// 		},
+// 		{
+// 			textContent: "Tentang Kami",
+// 			url: "/tentang-kami.html",
+// 		},
+// 		{ textContent: "Produk", url: "/produk.html" },
+// 		{
+// 			textContent: "Kontak Kami",
+// 			url: "/kontak-kami.html",
+// 		},
+// 	],
+// };
+
+/**
+ * For Preview
+ */
 const staticContent = {
 	navbar: [
 		{
 			textContent: "Beranda",
-			url: "/index.html",
+			url: "/tugas-akhir/index.html",
 			className: "menu-item",
 		},
 		{
 			textContent: "Tentang Kami",
-			url: "/tentang-kami.html",
+			url: "/tugas-akhir/tentang-kami.html",
 			className: "menu-item",
 		},
-		{ textContent: "Produk", url: "/produk.html", className: "menu-item" },
+		{
+			textContent: "Produk",
+			url: "/tugas-akhir/produk.html",
+			className: "menu-item",
+		},
 		{
 			textContent: "Kontak Kami",
-			url: "/kontak-kami.html",
+			url: "/tugas-akhir/kontak-kami.html",
 			className: "menu-item",
 		},
 		{
 			textContent: "Masuk",
-			url: "/login.html",
+			url: "/tugas-akhir/login.html",
 			className: "btn btn-primary",
 		},
 	],
@@ -54,16 +134,16 @@ const staticContent = {
 		},
 		{
 			textContent: "Beranda",
-			url: "/index.html",
+			url: "/tugas-akhir/index.html",
 		},
 		{
 			textContent: "Tentang Kami",
-			url: "/tentang-kami.html",
+			url: "/tugas-akhir/tentang-kami.html",
 		},
-		{ textContent: "Produk", url: "/produk.html" },
+		{ textContent: "Produk", url: "/tugas-akhir/produk.html" },
 		{
 			textContent: "Kontak Kami",
-			url: "/kontak-kami.html",
+			url: "/tugas-akhir/kontak-kami.html",
 		},
 	],
 };

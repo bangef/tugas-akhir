@@ -68,6 +68,7 @@
 		}
 	}
 	.container {
+		overflow-x: hidden;
 		@include container {
 			flex-direction: column;
 		}

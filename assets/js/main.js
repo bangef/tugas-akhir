@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	window.addEventListener("scroll", () => {
-		window.scrollY > 0
+		window.scrollY > 300
 			? changeStyle(".go-top", "display", "flex")
 			: changeStyle(".go-top", "display", "none");
 	});
